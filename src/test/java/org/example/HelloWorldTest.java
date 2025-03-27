@@ -1,13 +1,14 @@
 package org.example;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class HelloWorldTest {
+//Test con Junit4
+public class HelloWorldTest {
 
     @Test
-    void gethello() {
+    public void gethello() {
         HelloWorld helloWorld = new HelloWorld();
         assertEquals("Hello World", helloWorld.gethello());
     }
