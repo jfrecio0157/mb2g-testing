@@ -1,8 +1,8 @@
 # mb2g-testing
 
 
-## Configurar intellij - Uso de Jacoco en Maven para recoger pruebas unitarias y pruebas integrales
-
+## Configurar intellij - Uso de Jacoco en Maven para ver cobertura de pruebas unitarias y pruebas integrales
+ 
 Tenemos dos test, uno de una prueba unitaria (el que acaba en test) y otro de prueba integrada (acaba en IT)
 Hemos modificado el pom.xml, incluyendo Jacoco
 
