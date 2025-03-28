@@ -1,4 +1,4 @@
 # mb2g-testing
 
-Configurar intellij - Maven para hacer test JUNIT4 y JUNIT5
+Configurar intellij - Generacion de Test Report con Maven
 
