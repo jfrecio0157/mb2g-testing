@@ -14,6 +14,7 @@
         <java.version>11</java.version>
         <jaxb.version>2.3.0</jaxb.version>
         <junit.version>5.13.0-M2</junit.version>
+        <jboss.version>2.0.0.Final-redhat-00001</jboss.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
@@ -34,9 +35,30 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <!-- Se trae un artefacto del repositorio JBoss -->
+        <!-- https://mvnrepository.com/artifact/org.jboss.spec.javax.ejb/jboss-ejb-api_3.2_spec -->
+        <dependency>
+            <groupId>org.jboss.spec.javax.ejb</groupId>
+            <artifactId>jboss-ejb-api_3.2_spec</artifactId>
+            <version>${jboss.version}</version>
+            <scope>provided</scope>
+        </dependency>
 
     </dependencies>
 
+
+    <!-- Se incluye el repositorio donde esta el artefacto de JBoss -->
+    <!-- Se comenta porque se ha creado a nivel del setting.xml local
+    <repositories>
+        <repository>
+            <id>redhat-ga</id>
+            <url>https://maven.repository.redhat.com/ga/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    -->
 
     <build>
         <plugins>
