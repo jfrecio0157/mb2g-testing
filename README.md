@@ -27,3 +27,7 @@ La idea es traerse un artefacto del repositorio JBoss (en lugar del que tenemos 
    
 En mi directorio local (usuario -> .m2 -> repositorio) tengo una carpeta jboss con los artefactos que se ha traido del repositorio JBoss, y esos son los que va a usarse
 
+En la v08R00F00 se han añadido
+- Dos perfiles al setting.xml, una para pruebas de test y otra para uat. Se activa uno u otro en el Maven en intellij
+- Modificado HelloWorld5Test.java para que muestre el perfil activo
+- Modificado el pom.xml -> en properties, para usar la propiedad TEST_HOST; y en el artefacto maven-surefire se ha añadido la enviromentVariable 

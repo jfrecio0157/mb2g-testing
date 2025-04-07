@@ -15,6 +15,7 @@
         <jaxb.version>2.3.0</jaxb.version>
         <junit.version>5.13.0-M2</junit.version>
         <jboss.version>2.0.0.Final-redhat-00001</jboss.version>
+        <TEST_HOST>localhost</TEST_HOST>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
@@ -70,7 +71,11 @@
                 <configuration>
                     <!-- Sets the VM argument line used when unit tests are run. -->
                     <argLine>${surefireArgLine}</argLine>
+                    <environmentVariables>
+                        <TEST_HOST>${TEST_HOST}</TEST_HOST>
+                    </environmentVariables>
                 </configuration>
+
             </plugin>
 
             <!--> Plugin para el test integracion -->
@@ -182,7 +187,23 @@
         </plugins>
     </build>
 
-
+    <!-- perfiles para las pruebas -->
+    <!-- Se llevan al setting.xml
+    <profiles>
+        <profile>
+            <id>test</id>
+            <properties>
+                <TEST_HOST>test.example.com</TEST_HOST>
+            </properties>
+        </profile>
+        <profile>
+            <id>uat</id>
+            <properties>
+                <TEST_HOST>uat.example.com</TEST_HOST>
+            </properties>
+        </profile>
+    </profiles>
+    -->
     <reporting>
         <plugins>
             <plugin>

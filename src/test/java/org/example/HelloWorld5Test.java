@@ -10,5 +10,6 @@ public class HelloWorld5Test {
 
         assert ("Hello World").equals(helloWorld.gethello());
         System.out.println("Test con JUnit5");
+        System.out.println(System.getenv("TEST_HOST"));;
     }
 }
